@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+        <title>Cheatsheet Colors CSS</title>
+        <link href="./styles.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="navigation">
+            <p><a href="#named-colors">Named colors</a></p>
+            <p><a href='#hex-colors'>Hex colors</a></p>
+            <p><a href='#rgb'>RGB</a></p>
+            <p><a href='#hsl'>HSL</a></p>
+        </div>
+        <div class="header">
+            <h1>Color styling</h1>
+            <p>4 ways to represent color in CSS</p>
+        </div>
+        <p class="introduction">
+            CSS supports a wide variety of colors. These include named colors, like blue, 
+            black, and limegreen, along with colors described by a numeric value. 
+            Using a numeric system allows us to take advantage of the whole spectrum of colors that 
+            browsers support. In this lesson, we're going to explore all the color options CSS offers. <br>
+            <br>
+            Colors in CSS can be described in four different ways.
+        </p>
+        <ol>
+            <li id="named-colors">Named Colors</li>
+            <p>English words that describe colors, also called keyword colors. 
+                There are some examples of named colors:</p>
+            <table class="example">
+                <tr>
+                    <td>darkslategrey:</td>
+                    <td class="c1 c"></td>
+                </tr>
+                <tr> 
+                    <td>darkblue:</td>
+                    <td class="c2 c"></td>
+                </tr>
+                <tr>
+                    <td>cornflowerblue:</td>
+                    <td class="c3 c"></td>
+                </tr>
+                <tr>
+                    <td>cadetblue:</td>
+                    <td class="c4 c"></td>
+                </tr>
+                <tr>
+                    <td>lightcoral:</td>
+                    <td class="c5 c"></td>
+                </tr>
+                <tr>
+                    <td>mediumpurple:</td>
+                    <td class="c6 c"></td>
+                </tr>
+            </table>
+
+            <li id="hex-colors">Hexademical Colors</li>
+            <p>
+                One syntax that we can use to specify colors is called <em>hexadecimal</em>. Colors specified using 
+                this system are called hex colors. A hex color begins with a hash character (#) which 
+                is followed by three or six characters. The characters represent values for red, blue and green.
+            </p>
+            <table class="example">
+                <tr>
+                    <td>darkseagreen:</td>
+                    <td>#8FBC8F</td>
+                </tr>
+                <tr>
+                    <td>sienna:</td>
+                    <td>#A0522D</td>
+                </tr>
+                <tr>
+                    <td>saddlebrown:</td>
+                    <td>#8B4513</td>
+                </tr>
+                <tr>
+                    <td>black:</td>
+                    <td>#000000 or #000</td>
+                </tr>
+                <tr>
+                    <td>white:</td>
+                    <td>#FFFFFF or #FFF</td>
+                </tr>
+                <tr>
+                    <td>aqua:</td>
+                    <td>#00FFFF or #0FF</td>
+                </tr>
+            </table>
+            <p>
+                In the example above, you may notice that there are both letters and numbers in the values. 
+                This is because the hexadecimal number system has 16 digits (0-15) instead of 10 (0-9) like 
+                in the standard decimal system. To represent 10-15, we use A-F. 
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">Here</a> is a list 
+                of many different colors and their hex values.
+            </p>
+            <p>
+                Notice that black, white, and aqua are all represented with both three characters and six 
+                characters. This can be done with hex colors whose number pairs are the same characters. In 
+                the example above, aqua can be represented as #0FF because both of the first two characters 
+                are '0' and the second and third pairs of characters are both 'F's. Keep in mind that all three 
+                character hex colors can be represented with six characters (by repeating each character twice) 
+                but the same is not true in reverse.
+            </p>
+            <p class="additional">In both hex and RGB, we have three values, one for each color. Each can be one of 256 values. 
+                Specifically, 256 * 256 * 256 = 16,777,216. That is the amount of colors we can now represent. 
+                Compare that to the roughly 140 named CSS colors!</p>
+
+            <li id="rgb">RGB</li>
+            <p>
+                There is another syntax for representing RGB values, commonly referred to as 'RGB value' or just 'RGB', 
+                that uses decimal numbers rather than hexadecimal numbers, and it looks like this:<br>
+                <br>
+                <span class='example'>
+                    h1 { <br>
+                    &nbsp&nbsp color: rgb(23, 45, 23);<br>
+                    }<br>
+                </span>
+                <br>
+                Each of the three values represents a color component, and each can have a decimal number value from 0 to 255. 
+                The first number represents the amount of red, the second is green, and the third is blue. 
+                These colors are exactly the same as hex, but with a different syntax and a different number system.<br>
+                <br>
+                In general, hex and RGB color representations are equivalent. Which you choose is a matter of personal taste.
+                That said, it's good to choose one and be consistent throughout your CSS, because it's easier to compare hex 
+                to hex and RGB to RGB.
+            </p>
+
+            <li id="hsl">HSL</li>
+            <p>The RGB color scheme is convenient because it's very close to how computers represent colors internally. 
+                There's another equally powerful system in CSS called the hue-saturation-lightness color scheme, abbreviated as HSL.<br>
+                <br>
+                The syntax for HSL is similar to the decimal form of RGB, though it differs in important ways. 
+                The first number represents the degree of the hue, and can be between 0 and 360. 
+                The second and third numbers are percentages representing saturation and lightness respectively. 
+                Here is an example:<br>
+                <br>
+                <span class="example">color: hsl(120, 60%, 70%);</span> <br>
+            </p>
+                <img src="./hsl.png"/>
+            <p>
+                <em>Hue</em> is the first number. It refers to an angle on a color wheel. Red is 0 degrees, Green is 120 degrees, 
+                Blue is 240 degrees, and then back to Red at 360. You can see an example of a color wheel below. <br>
+                <br>
+                <em>Saturation</em> refers to the intensity or purity of the color. The saturation increases towards 100% as 
+                the color becomes richer. The saturation decreases towards 0% as the color becomes grayer.<br>
+                <br>
+                <em>Lightness</em> refers to how light or dark the color is. Halfway, or 50%, is normal lightness. Imagine 
+                a sliding dimmer on a light switch that starts halfway. Sliding the dimmer up towards 100% makes 
+                the color lighter, closer to white. Sliding the dimmer down towards 0% makes the color darker, closer to black.
+            </p>
+        </ol>
+        <div class="footer">
+            <ul class="contact">
+                <p>Contacts</p>
+                <li>Phone: +380 95 727 39 49</li>
+                <li>Email: asya.kkr@icloud.com</li>
+                <li>Instagram: @asya.kkr</li>
+                <li>Address: Kyiv, Ukraine</li>
+            </ul>
+            <ul class="menu">
+                <p>Menu</p>
+                <li><a href="#named-colors">Named colors</a></li>
+                <li><a href='#hex-colors'>Hex colors</a></li>
+                <li><a href='#rgb'>RGB</a></li>
+                <li><a href='#hsl'>HSL</a></li>
+            </ul>
+            <p class="copyright">Ukraine 2022</p>
+        </div>
+</html>
