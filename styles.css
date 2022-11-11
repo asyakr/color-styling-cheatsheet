@@ -6,6 +6,7 @@ body {
 }
 
 .navigation {
+    display: flex;
     background-color: lightslategray;
     text-transform: uppercase;
     width: 100%;
@@ -15,12 +16,12 @@ body {
 .navigation p a {
     color: aliceblue;
 }
-.navigation  p {
+.navigation p {
     display: inline-block;
-    width: 24%;
+    width: 20%;
     text-align: center;
     color: aliceblue;
-    margin: 15px auto;
+    margin: 15px 0;
     font-size: larger;
 }
 
@@ -103,7 +104,7 @@ ol p {
 }
 
 .additional {
-    border: 5px solid rgb(62, 81, 99);
+    border: 3px solid rgb(185, 196, 205);
     padding: 5px;
     margin-right: 20px;
 }
@@ -116,16 +117,17 @@ img {
 .footer {
     background-color: rgb(185, 196, 205);
     width: 100%;
-    position: relative;
+}
+
+.footer-lists {
+    display: flex;
 }
 
 .footer ul {
     display: inline-block;
     list-style: none;
-    position: relative;
-    width: 40%;
-    margin: 0 50px;
-    padding: 15px;
+    width: 50%;
+    padding: 15px 0;
     text-align: center;
 }
 
